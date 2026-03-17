@@ -1,0 +1,72 @@
+# OS / editor
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.python-version
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.coverage
+.coverage.*
+htmlcov/
+.venv/
+venv/
+env/
+myenv/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Build / packaging
+build/
+dist/
+*.egg-info/
+.eggs/
+pip-wheel-metadata/
+
+# Environment and secrets
+.env
+.env.*
+!.env.example
+docker/.env
+terraform.tfvars
+*.auto.tfvars
+*.pem
+*.key
+*.crt
+
+# Terraform
+.terraform/
+*.tfstate
+*.tfstate.*
+crash.log
+crash.*.log
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+
+# Docker / compose runtime files
+docker-compose.override.yml
+*.pid
+
+# Airflow local metadata
+airflow.db
+webserver_config.py
+logs/
+
+# Data and artifacts generated locally
+data/
+artifacts/
+tmp/
+
+# Input files
+merchants-subset.csv
+*.parquet

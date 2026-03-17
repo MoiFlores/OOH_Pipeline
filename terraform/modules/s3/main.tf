@@ -1,30 +1,36 @@
 resource "aws_s3_bucket" "bronze" {
   bucket = "${var.name_prefix}-bronze"
+  force_destroy = true
   tags   = var.tags
 }
 
 resource "aws_s3_bucket" "silver" {
   bucket = "${var.name_prefix}-silver"
+  force_destroy = true
   tags   = var.tags
 }
 
 resource "aws_s3_bucket" "gold" {
   bucket = "${var.name_prefix}-gold"
+  force_destroy = true
   tags   = var.tags
 }
 
 resource "aws_s3_bucket" "logs" {
   bucket = "${var.name_prefix}-logs"
+  force_destroy = true
   tags   = var.tags
 }
 
 resource "aws_s3_bucket" "athena" {
   bucket = "${var.name_prefix}-athena-results"
+  force_destroy = true
   tags   = var.tags
 }
 
 resource "aws_s3_bucket" "dags" {
   bucket = "${var.name_prefix}-dags"
+  force_destroy = true
   tags   = var.tags
 }
 

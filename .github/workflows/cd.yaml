@@ -1,0 +1,13 @@
+name: Terraform Plan
+on:
+  pull_request:
+    paths:
+      - "terraform/**"
+jobs:
+  tf-plan:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: hashicorp/setup-terraform@v3
+      - run: terraform -chdir=terraform init
+      - run: terraform -chdir=terraform plan -var-file=environments/dev/terraform.tfvars

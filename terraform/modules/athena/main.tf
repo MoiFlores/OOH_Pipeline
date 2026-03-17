@@ -1,5 +1,6 @@
 resource "aws_athena_workgroup" "ooh_wg" {
   name = "${var.name_prefix}-wg"
+  force_destroy = true
 
   configuration {
     enforce_workgroup_configuration    = true
